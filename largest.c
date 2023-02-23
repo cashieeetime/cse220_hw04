@@ -1,21 +1,21 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(void) {
-  int idx, size, max;
-  size = 6;
+  char str[1000];
+  scanf("%[^\n]%*c", str);
+  int max, val;
   max = 0;
-  int numbers[size];
 
-  for (idx=0; idx<size; idx++) {
-    scanf("%d", &numbers[idx]);
-  }
-
-  for (idx=size - 1; idx>=0; idx--) {
-    if (numbers[idx] > max) {
-      max = numbers[idx];
+  char * token = strtok(str, " ");
+  while( token != NULL ) {
+    token = strtok(NULL, " ");
+    val = atoi(token);
+    if (val > max) {
+      max = val;
     }
   }
 
-  printf("\n%d", max);
+  printf("%d", val);
   return 0;
 }
