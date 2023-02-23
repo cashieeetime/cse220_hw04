@@ -10,5 +10,5 @@ int main(void) {
     if (sqrt <= num) {
       printf("\n%d\n", sqrt);
       i += 2; }
-  } return 0;
+} return 0;
 }
