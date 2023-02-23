@@ -9,13 +9,10 @@ int main(void) {
 
   char * token = strtok(str, " ");
   while( token != NULL ) {
-    token = strtok(NULL, " ");
     val = atoi(token);
     if (val > max) {
       max = val;
-    }
-  }
-
-  printf("%d", val);
+    } token = strtok(NULL, " ");
+  } printf("%d", max);
   return 0;
 }
